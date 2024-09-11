@@ -8,10 +8,13 @@ namespace Projekt1Portfolio.Controllers
 {
     public class CategoryController : Controller
     {
-        // GET: Category
-        public ActionResult Index()
+        
+        // Method
+        public ActionResult CategoryList() 
         {
             return View();
         }
-    }
+
+  
+	}
 }
