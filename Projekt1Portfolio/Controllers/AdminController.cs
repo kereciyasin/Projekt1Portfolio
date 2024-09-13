@@ -18,5 +18,9 @@ namespace Projekt1Portfolio.Controllers
         {
 			return PartialView();
 		}
+        public PartialViewResult PartialSideBar()
+        {
+            return PartialSideBar();
+        }
     }
 }
