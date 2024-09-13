@@ -298,6 +298,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\PartialHead.cshtml" />
     <Content Include="Views\Admin\PartialSideBar.cshtml" />
+    <Content Include="Views\Admin\PartialNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

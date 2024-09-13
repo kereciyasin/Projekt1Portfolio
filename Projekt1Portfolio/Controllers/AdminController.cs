@@ -22,5 +22,10 @@ namespace Projekt1Portfolio.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult PartialNavBar()
+        {
+            return PartialView();
+        }
     }
 }
