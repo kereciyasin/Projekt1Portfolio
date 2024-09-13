@@ -20,7 +20,7 @@ namespace Projekt1Portfolio.Controllers
 		}
         public PartialViewResult PartialSideBar()
         {
-            return PartialSideBar();
+            return PartialView();
         }
     }
 }
