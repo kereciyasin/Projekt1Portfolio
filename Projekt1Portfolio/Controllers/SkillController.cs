@@ -10,9 +10,10 @@ namespace Projekt1Portfolio.Controllers
     public class SkillController : Controller
     {
         MyPortfolio5DbEntities context = new MyPortfolio5DbEntities();  
-		public ActionResult Skilllist()
+		public ActionResult SkillList()
         {
-            return View();
+            var values = context.Tbl_Skill.ToList(); 
+			return View();
         }
     }
 }
