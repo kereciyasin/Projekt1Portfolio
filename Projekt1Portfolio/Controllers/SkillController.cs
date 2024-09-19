@@ -13,7 +13,7 @@ namespace Projekt1Portfolio.Controllers
 		public ActionResult SkillList()
         {
             var values = context.Tbl_Skill.ToList(); 
-			return View();
+			return View(values);
         }
     }
 }
