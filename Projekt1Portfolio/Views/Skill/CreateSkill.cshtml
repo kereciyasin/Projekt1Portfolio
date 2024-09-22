@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "CreateSkill";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2 class="mb-4">Neue Fähigkeit hinzufügen</h2>
+<form method="post">
+    <label>Yetenek Basligi</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+    <label>Yetenek Ikonu</label>
+    <input type="text" name="Icon" class="form-control" />
+    <br />
+    <label>Yetenek Degeri</label>
+    <input type="text" name="Value" class="form-control" />
+    <br />
+    <button class="btn btn-info">Yetenegi Olustur</button>
+</form>

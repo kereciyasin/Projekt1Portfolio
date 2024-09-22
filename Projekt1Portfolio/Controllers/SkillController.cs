@@ -15,5 +15,10 @@ namespace Projekt1Portfolio.Controllers
             var values = context.Tbl_Skill.ToList(); 
 			return View(values);
         }
+
+        public ActionResult CreateSkill()
+        {
+            return View();
+        }
     }
 }
