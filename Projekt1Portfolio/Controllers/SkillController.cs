@@ -16,9 +16,18 @@ namespace Projekt1Portfolio.Controllers
 			return View(values);
         }
 
+        [HttpGet]
         public ActionResult CreateSkill()
         {
             return View();
         }
-    }
+
+        [HttpPost]
+		public ActionResult CreateSkill(Tbl_Skill skill)
+		{
+            context.Tbl_Skill.Add(skill);
+			context.SaveChanges();  
+			return RedirectToAction("SkillList");  
+		}
+	}
 }
