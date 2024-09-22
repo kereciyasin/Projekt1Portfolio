@@ -8,3 +8,29 @@
 
 <h2 class="mb-4">Gelen Mesajlar </h2>
 
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Gönderen</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+        <th>Durum</th>
+        <th>Kategori</th>
+        <th>Sil</th>
+        <th>Mesaji Ac</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.KontaktId</td>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.SendDate</td>
+            <td>@item.IsRead</td>
+            <td>@item.CategoryId</td>
+            <td><a href="#" class="btn btn-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-secondary">Mesaji Ac</a></td>
+            
+        </tr>
+    }
+</table>
