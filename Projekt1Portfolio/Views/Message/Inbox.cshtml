@@ -6,18 +6,18 @@
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2 class="mb-4">Gelen Mesajlar </h2>
+<h2 class="mb-4">Eingehende Nachrichten</h2>
 
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Gönderen</th>
-        <th>Konu</th>
-        <th>Tarih</th>
-        <th>Durum</th>
-        <th>Kategori</th>
-        <th>Sil</th>
-        <th>Mesaji Ac</th>
+        <th>Absender</th>
+        <th>Betreff</th>
+        <th>Datum</th>
+        <th>Status</th>
+        <th>Kategorie</th>
+        <th>Löschen</th>
+        <th>Nachricht öffnen</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -26,11 +26,18 @@
             <td>@item.Name</td>
             <td>@item.Subject</td>
             <td>@item.SendDate</td>
-            <td>@item.IsRead</td>
-            <td>@item.CategoryId</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-secondary">Mesaji Ac</a></td>
-            
+            @if (item.IsRead == false)
+            {
+                <td>Ungelesen</td>
+            }
+            else
+            {
+                <td>Gelesen</td>
+            }
+
+            <td>@item.Tbl_Category.CategoryName</td>
+            <td><a href="#" class="btn btn-danger">Löschen</a></td>
+            <td><a href="#" class="btn btn-primary">Nachricht öffnen</a></td>
         </tr>
     }
 </table>
