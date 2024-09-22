@@ -14,8 +14,8 @@
         <th>Absender</th>
         <th>Betreff</th>
         <th>Datum</th>
-        <th>Status</th>
         <th>Kategorie</th>
+        <th>Status</th>
         <th>Löschen</th>
         <th>Nachricht öffnen</th>
     </tr>
@@ -26,16 +26,18 @@
             <td>@item.Name</td>
             <td>@item.Subject</td>
             <td>@item.SendDate</td>
+            <td>@item.Tbl_Category.CategoryName</td>
             @if (item.IsRead == false)
             {
-                <td>Ungelesen</td>
+                <td><a href="#" class="btn btn-info">Als Gelesen Markieren</a></td>
             }
             else
             {
-                <td>Gelesen</td>
+                <td><a href="#" class="btn btn-warning">Als Ungelesen Markieren</a></td>
+
             }
 
-            <td>@item.Tbl_Category.CategoryName</td>
+
             <td><a href="#" class="btn btn-danger">Löschen</a></td>
             <td><a href="#" class="btn btn-primary">Nachricht öffnen</a></td>
         </tr>
