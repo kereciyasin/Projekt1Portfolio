@@ -1,4 +1,7 @@
-﻿
+﻿// Model tablosundan getrirs.
+@model List<Projekt1Portfolio.Models.Tbl_Skill>
+
+
 @{
     ViewBag.Title = "SkillList";
     Layout = "~/Views/Admin/Index.cshtml";
@@ -7,5 +10,24 @@
 
 <h2 class="mb-4">Yeteneklerimin Listesi</h2>
 
+<table class="table table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>Baslik</td>
+        <td>Deger</td>
+        <td>Sil</td>
+        <td>Güncelle</td>
+    </tr>
 
-            Buraya yeteneklerim gelecek.
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SkillId</td>
+            <td>@item.Title</td>
+            <td>@item.Value</td>
+         </tr>
+    }
+</table>
+
+
+     
