@@ -29,5 +29,13 @@ namespace Projekt1Portfolio.Controllers
 			context.SaveChanges();  
 			return RedirectToAction("SkillList");  
 		}
+
+        public ActionResult DeleteSkill(int id)
+        {
+            var value = context.Tbl_Skill.Find(id);
+            context.Tbl_Skill.Remove(value);
+            context.SaveChanges();
+            return RedirectToAction("SkillList");
+        }
 	}
 }
