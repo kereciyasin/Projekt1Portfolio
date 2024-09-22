@@ -15,5 +15,10 @@ namespace Projekt1Portfolio.Controllers
             var values = database.Tbl_Message.ToList();    
 			return View(values);
         }
+        public ActionResult MessageDetails(int id)
+        {
+            var value = database.Tbl_Message.Where(x => x.KontaktId == id).FirstOrDefault();   
+			return View(value);   
+		}
     }
 }
