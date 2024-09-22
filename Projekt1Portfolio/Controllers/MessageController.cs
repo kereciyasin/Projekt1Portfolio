@@ -12,7 +12,8 @@ namespace Projekt1Portfolio.Controllers
 		MyPortfolio5DbEntities database = new MyPortfolio5DbEntities();   
 		public ActionResult Inbox()
         {
-            return View();
+            var values = database.Tbl_Message.ToList();    
+			return View(values);
         }
     }
 }
