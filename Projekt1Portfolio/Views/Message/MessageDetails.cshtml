@@ -1,0 +1,12 @@
+﻿
+@model Projekt1Portfolio.Models.Tbl_Message
+@{
+    ViewBag.Title = "MessageDetails";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Mesaj Detaylari Sayfasi</h2>
+
+@Html.TextBoxFor(x=> x.Name);
+<br />  
+@Html.TextBoxFor(x=> x.Email);
