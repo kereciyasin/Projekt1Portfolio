@@ -29,11 +29,11 @@
             <td>@item.Tbl_Category.CategoryName</td>
             @if (item.IsRead == false)
             {
-                <td><a href="#" class="btn btn-info">Als Gelesen Markieren</a></td>
+                <td><a href="/Message/MessageStatusChanceToTrue/@item.KontaktId" class="btn btn-info">Als Gelesen Markieren</a></td>
             }
             else
             {
-                <td><a href="#" class="btn btn-warning">Als Ungelesen Markieren</a></td>
+                <td><a href="/Message/MessageStatusChanceToFalse/@item.KontaktId" class="btn btn-warning">Als Ungelesen Markieren</a></td>
 
             }
 

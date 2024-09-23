@@ -34,6 +34,7 @@ namespace Projekt1Portfolio.Controllers
 			value.IsRead = false;
 			database.SaveChanges();
 			return RedirectToAction("Inbox");
-		}
+		}   
+
 	}
 }
