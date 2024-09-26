@@ -36,6 +36,6 @@ namespace Projekt1Portfolio.Controllers
 			return RedirectToAction("Inbox");
 
 		}   
-        DivideByZeroException   
+          
 	}
 }
