@@ -1,0 +1,26 @@
+﻿@model Projekt1Portfolio.Models.Tbl_Experience  
+
+@{
+    ViewBag.Title = "CreateExperience";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Erfahrung hinzufügen</h2>  
+
+<form method="post">
+    <label>Company Name</label>
+    @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })   
+    <br />  
+    <label>Datum</label>
+    @Html.TextBoxFor(x => x.WorkDate, new { @class = "form-control" })
+    <br />
+    <label>Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Beschreibung</label>
+    @Html.TextAreaFor(x => x.Description, 6, 0, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-primary">Fähigkeit erstellen</button>   
+
+
+</form>
