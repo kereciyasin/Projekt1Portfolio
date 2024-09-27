@@ -29,6 +29,13 @@ namespace Projekt1Portfolio.Controllers
             database.Tbl_Experience.Add(p);
             database.SaveChanges();
             return RedirectToAction("ExperienceList");
-        }   
+        }
+        public ActionResult DeleteExperience(int id)
+        {
+            var value = database.Tbl_Experience.Find(id);
+            database.Tbl_Experience.Remove(value);
+            database.SaveChanges();
+            return RedirectToAction("ExperienceList");
+        }
     }
 }
