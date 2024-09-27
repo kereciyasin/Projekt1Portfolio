@@ -383,10 +383,10 @@
     <Content Include="Views\Experience\ExperienceList.cshtml" />
     <Content Include="Views\Experience\CreateExperience.cshtml" />
     <Content Include="Views\Experience\UpdateExperience.cshtml" />
+    <Content Include="Views\Statistics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Statistics\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
