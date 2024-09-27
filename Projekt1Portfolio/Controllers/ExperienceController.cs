@@ -24,24 +24,24 @@ namespace Projekt1Portfolio.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CreateExperience(Tbl_Experience p)
+        public ActionResult CreateExperience(Tbl_Experience create)
         {
-            database.Tbl_Experience.Add(p);
+            database.Tbl_Experience.Add(create);
             database.SaveChanges();
             return RedirectToAction("ExperienceList");
         }
-        public ActionResult DeleteExperience(int id)
+        public ActionResult DeleteExperience(int delete)
         {
-            var value = database.Tbl_Experience.Find(id);
+            var value = database.Tbl_Experience.Find(delete);
             database.Tbl_Experience.Remove(value);
             database.SaveChanges();
             return RedirectToAction("ExperienceList");
         }
 
         [HttpGet]
-        public ActionResult UpdateExperience(int id)
+        public ActionResult UpdateExperience(int update)
         {
-            var value = database.Tbl_Experience.Find(id);
+            var value = database.Tbl_Experience.Find(update);
             return View("UpdateExperience", value);
         }
         [HttpPost]
