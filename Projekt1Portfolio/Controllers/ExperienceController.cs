@@ -37,5 +37,23 @@ namespace Projekt1Portfolio.Controllers
             database.SaveChanges();
             return RedirectToAction("ExperienceList");
         }
+
+        [HttpGet]
+        public ActionResult UpdateExperience(int id)
+        {
+            var value = database.Tbl_Experience.Find(id);
+            return View("UpdateExperience", value);
+        }
+        [HttpPost]
+        public ActionResult UpdateExperience(Tbl_Experience p)
+        {
+            var value = database.Tbl_Experience.Find(p.ExperienceId);
+            value.CompanyName = p.CompanyName;
+            value.WorkDate = p.WorkDate;
+            value.Title = p.Title;
+            value.Description = p.Description;
+            database.SaveChanges();
+            return RedirectToAction("ExperienceList");
+        }   
     }
 }
