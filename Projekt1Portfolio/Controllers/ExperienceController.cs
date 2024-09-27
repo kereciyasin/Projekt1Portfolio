@@ -30,18 +30,18 @@ namespace Projekt1Portfolio.Controllers
             database.SaveChanges();
             return RedirectToAction("ExperienceList");
         }
-        public ActionResult DeleteExperience(int delete)
+        public ActionResult DeleteExperience(int id)
         {
-            var value = database.Tbl_Experience.Find(delete);
+            var value = database.Tbl_Experience.Find(id);
             database.Tbl_Experience.Remove(value);
             database.SaveChanges();
             return RedirectToAction("ExperienceList");
         }
 
         [HttpGet]
-        public ActionResult UpdateExperience(int update)
+        public ActionResult UpdateExperience(int id)
         {
-            var value = database.Tbl_Experience.Find(update);
+            var value = database.Tbl_Experience.Find(id);
             return View("UpdateExperience", value);
         }
         [HttpPost]
