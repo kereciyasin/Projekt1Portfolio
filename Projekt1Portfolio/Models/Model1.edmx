@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MyPortfolio5DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MyPortfolio5DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -30,6 +30,7 @@
           </Key>
           <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CategoryStatus" Type="bit" />
         </EntityType>
         <EntityType Name="Tbl_Education">
           <Key>
@@ -60,7 +61,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="Subject" Type="nvarchar" MaxLength="50" />
-          <Property Name="MessageDetail" Type="nvarchar" MaxLength="100" />
+          <Property Name="MessageDetail" Type="nvarchar" MaxLength="500" />
           <Property Name="SendDate" Type="datetime" />
           <Property Name="IsRead" Type="bit" />
           <Property Name="CategoryId" Type="int" />
@@ -146,8 +147,7 @@
             <End Role="Tbl_Message" EntitySet="Tbl_Message" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MyPortfolio5DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -177,6 +177,7 @@
           <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Tbl_Message" Relationship="Self.FK_Tbl_Message_Tbl_Category" FromRole="Tbl_Category" ToRole="Tbl_Message" />
+          <Property Name="CategoryStatus" Type="Boolean" />
         </EntityType>
         <EntityType Name="Tbl_Education">
           <Key>
@@ -207,7 +208,7 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MessageDetail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MessageDetail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SendDate" Type="DateTime" Precision="3" />
           <Property Name="IsRead" Type="Boolean" />
           <Property Name="CategoryId" Type="Int32" />
@@ -324,6 +325,7 @@
           <EntitySetMapping Name="Tbl_Category">
             <EntityTypeMapping TypeName="MyPortfolio5DbModel.Tbl_Category">
               <MappingFragment StoreEntitySet="Tbl_Category">
+                <ScalarProperty Name="CategoryStatus" ColumnName="CategoryStatus" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
               </MappingFragment>
