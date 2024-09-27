@@ -12,7 +12,7 @@ namespace Projekt1Portfolio.Controllers
     {
         MyPortfolio5DbEntities database = new MyPortfolio5DbEntities();
 
-        public ActionResult Index()
+        public ActionResult ExperienceList()
         {
             var values = database.Tbl_Experience.ToList();
             return View(values);
