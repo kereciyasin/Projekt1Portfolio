@@ -17,5 +17,18 @@ namespace Projekt1Portfolio.Controllers
             var values = database.Tbl_Experience.ToList();
             return View(values);
         }
+
+        [HttpGet]
+        public ActionResult CreateExperience()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateExperience(Tbl_Experience p)
+        {
+            database.Tbl_Experience.Add(p);
+            database.SaveChanges();
+            return RedirectToAction("ExperienceList");
+        }   
     }
 }
