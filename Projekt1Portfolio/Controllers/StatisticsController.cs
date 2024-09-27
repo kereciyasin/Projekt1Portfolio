@@ -18,7 +18,9 @@ namespace Projekt1Portfolio.Controllers
             int skillCount = context.Tbl_Skill.Count();
             var totalSkillValue = context.Tbl_Skill.Sum(x => x.Value);  
             var averageSkillValue = context.Tbl_Skill.Average(x => x.Value);    
-            var getEmailFromProfile = context.Tbl_Profile.Select(x => x.Email).FirstOrDefault();    
+            var getEmailFromProfile = context.Tbl_Profile.Select(x => x.Email).FirstOrDefault();  
+            var getLastCategoryId = context.Tbl_Category.Max(x => x.CategoryId);
+            var getLastCategoryName = context.Tbl_Category.Where(x => x.CategoryId == getLastCategoryId).Select(x => x.CategoryName).FirstOrDefault();
 
             ViewBag.MessageCount = messageCount;
             ViewBag.MessageCountIsReadyByTrue = messageCountIsReadyByTrue;
@@ -27,6 +29,8 @@ namespace Projekt1Portfolio.Controllers
             ViewBag.TotalSkillValue = totalSkillValue;
             ViewBag.AverageSkillValue = averageSkillValue;
             ViewBag.GetEmailFromProfil = getEmailFromProfile;
+            ViewBag.GetLastCategoryId = getLastCategoryId;
+            ViewBag.GetLastCategoryName = getLastCategoryName;
 
             return View();
         }
