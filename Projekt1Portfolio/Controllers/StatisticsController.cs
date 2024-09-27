@@ -19,13 +19,14 @@ namespace Projekt1Portfolio.Controllers
             var totalSkillValue = context.Tbl_Skill.Sum(x => x.Value);  
             var averageSkillValue = context.Tbl_Skill.Average(x => x.Value);    
             var getEmailFromProfile = context.Tbl_Profile.Select(x => x.Email).FirstOrDefault();    
+
             ViewBag.MessageCount = messageCount;
             ViewBag.MessageCountIsReadyByTrue = messageCountIsReadyByTrue;
             ViewBag.MessageCountIsReadyByFalse = messageCountIsReadyByFalse;
             ViewBag.SkillCount = skillCount;
             ViewBag.TotalSkillValue = totalSkillValue;
             ViewBag.AverageSkillValue = averageSkillValue;
-            ViewBag.GetEmailFromProfile = getEmailFromProfile;
+            ViewBag.GetEmailFromProfil = getEmailFromProfile;
 
             return View();
         }

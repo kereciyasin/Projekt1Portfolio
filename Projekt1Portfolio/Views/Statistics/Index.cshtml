@@ -4,5 +4,12 @@
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2>Index</h2>
+<h2 class="mb-4">Statistiken</h2>
 
+<div class="alert alert-info"> Gesamtzahl der Nachrichten: <b>@ViewBag.messageCount</b></div>
+<div class="alert alert-warning"> Gelesene Nachrichten: <b>@ViewBag.MessageCountIsReadyByTrue</b></div>
+<div class="alert alert-danger"> Ungelesene Nachrichten: <b>@ViewBag.MessageCountIsReadyByFalse</b></div>
+<div class="alert alert-success"> Anzahl der Fähigkeiten: <b>@ViewBag.SkillCount</b></div>
+<div class="alert alert-dark"> Gesamtpunktzahl der Fähigkeiten: <b>@ViewBag.TotalSkillValue</b></div>
+<div class="alert alert-primary"> Durchschnittliche Punktzahl der Fähigkeiten: <b>@ViewBag.AverageSkillValue</b></div>
+<div class="alert alert-dismissible"> Aktuelle E-Mail-Adressen: <b>@ViewBag.GetEmailFromProfil</b></div>
