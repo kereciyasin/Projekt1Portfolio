@@ -381,6 +381,7 @@
     <Content Include="Views\Message\MessageDetails.cshtml" />
     <Content Include="Views\Experience\ExperienceList.cshtml" />
     <Content Include="Views\Experience\CreateExperience.cshtml" />
+    <Content Include="Views\Experience\UpdateExperience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

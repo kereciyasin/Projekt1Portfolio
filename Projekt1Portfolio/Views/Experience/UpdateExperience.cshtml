@@ -1,0 +1,30 @@
+﻿
+@model Projekt1Portfolio.Models.Tbl_Experience  
+
+@{
+    ViewBag.Title = "UpdateExperience";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Erfahrung updaten</h2>
+
+<form method="post">
+    
+    @Html.HiddenFor(x => x.ExperienceId, new { @class = "form-control" })
+    
+    <label>Company Name</label>
+    @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+    <br />
+    <label>Datum</label>
+    @Html.TextBoxFor(x => x.WorkDate, new { @class = "form-control" })
+    <br />
+    <label>Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Beschreibung</label>
+    @Html.TextAreaFor(x => x.Description, 6, 0, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-primary">Fähigkeit erstellen</button>
+
+
+</form>
