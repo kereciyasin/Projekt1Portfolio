@@ -14,9 +14,14 @@ namespace Projekt1Portfolio.Controllers
             return View();
         }
         
-        public ActionResult PartialHead()
+        public PartialViewResult PartialHead()
         {
-            return View();
+            return PartialView();
         }
+
+        public PartialViewResult PartialNavbar()
+        {
+            return PartialView();
+        }   
     }
 }
