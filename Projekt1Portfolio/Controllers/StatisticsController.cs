@@ -12,11 +12,15 @@ namespace Projekt1Portfolio.Controllers
         MyPortfolio5DbEntities context = new MyPortfolio5DbEntities();  
         public ActionResult Index()
         {
+            /* Mesaj sayisini */
             int messageCount = context.Tbl_Message.Count();
+            /*  */
             int messageCountIsReadyByTrue = context.Tbl_Message.Where(x => x.IsRead == true).Count();   
             int messageCountIsReadyByFalse = context.Tbl_Message.Where(x => x.IsRead == false).Count();
             int skillCount = context.Tbl_Skill.Count();
-            var totalSkillValue = context.Tbl_Skill.Sum(x => x.Value);  
+            /* Skillerin Value si topla. */
+            var totalSkillValue = context.Tbl_Skill.Sum(x => x.Value);
+            /* Skillerin ortalamasini bul. */
             var averageSkillValue = context.Tbl_Skill.Average(x => x.Value);    
             var getEmailFromProfile = context.Tbl_Profile.Select(x => x.Email).FirstOrDefault();  
             var getLastCategoryId = context.Tbl_Category.Max(x => x.CategoryId);
