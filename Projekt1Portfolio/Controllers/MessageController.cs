@@ -35,7 +35,14 @@ namespace Projekt1Portfolio.Controllers
 			database.SaveChanges();
 			return RedirectToAction("Inbox");
 
-		}   
-          
-	}
+		} 
+        public ActionResult Loeschen(int id)
+        {
+            var value = database.Tbl_Message.Where(x => x.KontaktId == id).FirstOrDefault();
+            database.Tbl_Message.Remove(value);
+            database.SaveChanges();
+            return RedirectToAction("Inbox");
+        }   
+
+    }
 }
