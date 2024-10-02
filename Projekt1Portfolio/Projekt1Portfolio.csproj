@@ -514,6 +514,7 @@
     <Content Include="Views\Experience\UpdateExperience.cshtml" />
     <Content Include="Views\Statistics\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

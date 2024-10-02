@@ -13,5 +13,10 @@ namespace Projekt1Portfolio.Controllers
         {
             return View();
         }
+        
+        public ActionResult PartialHead()
+        {
+            return View();
+        }
     }
 }
