@@ -17,6 +17,7 @@
         <EntityTypeShape EntityType="MyPortfolio5DbModel.Tbl_Testimonial" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyPortfolio5DbModel.Tbl_Work" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="MyPortfolio5DbModel.FK_Tbl_Message_Tbl_Category" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MyPortfolio5DbModel.Tbl_Admin" Width="1.5" PointX="7.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

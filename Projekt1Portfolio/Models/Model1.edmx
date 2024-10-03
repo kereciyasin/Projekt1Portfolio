@@ -24,6 +24,16 @@
           <Property Name="Detail" Type="nvarchar" MaxLength="1000" />
           <Property Name="ImageUrl" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPortfolio5Db.dbo.Tbl_Admin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Tbl_Category">
           <Key>
             <PropertyRef Name="CategoryId" />
@@ -142,6 +152,13 @@
           <EntitySet Name="Tbl_Skill" EntityType="Self.Tbl_Skill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Testimonial" EntityType="Self.Tbl_Testimonial" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Work" EntityType="Self.Tbl_Work" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Admin" EntityType="Self.Tbl_Admin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_Admin].[id] AS [id], 
+    [Tbl_Admin].[username] AS [username], 
+    [Tbl_Admin].[password] AS [password]
+    FROM [dbo].[Tbl_Admin] AS [Tbl_Admin]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Tbl_Message_Tbl_Category" Association="Self.FK_Tbl_Message_Tbl_Category">
             <End Role="Tbl_Category" EntitySet="Tbl_Category" />
             <End Role="Tbl_Message" EntitySet="Tbl_Message" />
@@ -294,7 +311,16 @@
             <End Role="Tbl_Category" EntitySet="Tbl_Category" />
             <End Role="Tbl_Message" EntitySet="Tbl_Message" />
           </AssociationSet>
+          <EntitySet Name="Tbl_Admin" EntityType="MyPortfolio5DbModel.Tbl_Admin" />
         </EntityContainer>
+        <EntityType Name="Tbl_Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -422,6 +448,15 @@
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
                 <ScalarProperty Name="GithubUrl" ColumnName="GithubUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Admin">
+            <EntityTypeMapping TypeName="MyPortfolio5DbModel.Tbl_Admin">
+              <MappingFragment StoreEntitySet="Tbl_Admin">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
