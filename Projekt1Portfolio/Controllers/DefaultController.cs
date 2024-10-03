@@ -53,5 +53,10 @@ namespace Projekt1Portfolio.Controllers
 
             return PartialView();
         }
+        public PartialViewResult PartialEducation()
+        {
+            var values = context.Tbl_Education.ToList();
+            return PartialView(values);
+        }
     }
 }
