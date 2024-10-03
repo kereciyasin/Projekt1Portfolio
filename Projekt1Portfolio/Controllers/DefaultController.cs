@@ -62,5 +62,10 @@ namespace Projekt1Portfolio.Controllers
         {
             return PartialView();   
         }
+        public PartialViewResult PartialSkill()
+        {
+            var values = context.Tbl_Skill.ToList();
+            return PartialView(values); 
+        }
     }
 }
