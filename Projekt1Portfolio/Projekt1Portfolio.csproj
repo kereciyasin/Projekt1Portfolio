@@ -516,6 +516,7 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\PartialHead.cshtml" />
     <Content Include="Views\Default\PartialNavbar.cshtml" />
+    <Content Include="Views\Default\PartialHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
