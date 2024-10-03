@@ -47,6 +47,7 @@ namespace Projekt1Portfolio.Controllers
             ViewBag.title = context.Tbl_Profile.Select(x => x.Title).FirstOrDefault();
             ViewBag.description = context.Tbl_Profile.Select(x => x.Description).FirstOrDefault();
             ViewBag.email = context.Tbl_Profile.Select(x => x.Email).FirstOrDefault();
+            ViewBag.address = context.Tbl_Profile.Select(x => x.Address).FirstOrDefault();  
             ViewBag.phone = context.Tbl_Profile.Select(x => x.PhoneNumber).FirstOrDefault();
             ViewBag.image = context.Tbl_Profile.Select(x => x.ImageUrl).FirstOrDefault();
 
