@@ -519,6 +519,7 @@
     <Content Include="Views\Default\PartialHeader.cshtml" />
     <Content Include="Views\Default\PartialAbout.cshtml" />
     <Content Include="Views\Default\PartialEducation.cshtml" />
+    <Content Include="Views\Default\PartialScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
