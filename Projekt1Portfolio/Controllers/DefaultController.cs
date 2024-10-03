@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt1Portfolio.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,8 +7,10 @@ using System.Web.Mvc;
 
 namespace Projekt1Portfolio.Controllers
 {
+     
     public class DefaultController : Controller
     {
+        MyPortfolio5DbEntities context = new MyPortfolio5DbEntities();  
         // GET: Default
         public ActionResult Index()
         {
@@ -26,6 +29,9 @@ namespace Projekt1Portfolio.Controllers
 
         public PartialViewResult PartialHeader()
         {
+            ViewBag.about = context.Tbl_About.Select(x => x.Title).FirstOrDefault();
+            ViewBag.details = context.Tbl_About.Select(x => x.Detail).FirstOrDefault();
+            ViewBag.image = context.Tbl_About.Select(x => x.ImageUrl).FirstOrDefault();    
             return PartialView();
         }
     }
