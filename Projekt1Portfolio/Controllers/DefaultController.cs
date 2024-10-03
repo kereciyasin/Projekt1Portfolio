@@ -41,5 +41,16 @@ namespace Projekt1Portfolio.Controllers
 
             return PartialView();
         }
+
+        public PartialViewResult PartialAbout()
+        {
+            ViewBag.title = context.Tbl_Profile.Select(x => x.Title).FirstOrDefault();
+            ViewBag.description = context.Tbl_Profile.Select(x => x.Description).FirstOrDefault();
+            ViewBag.email = context.Tbl_Profile.Select(x => x.Email).FirstOrDefault();
+            ViewBag.phone = context.Tbl_Profile.Select(x => x.PhoneNumber).FirstOrDefault();
+            ViewBag.image = context.Tbl_Profile.Select(x => x.ImageUrl).FirstOrDefault();
+
+            return PartialView();
+        }
     }
 }
