@@ -382,48 +382,12 @@
     <div class="container-fluid" id="pigraContact">
         <div class="container">
             <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="contact-header h-100 bg-dark pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                            <p class="text-white sub-title">Contact Me</p>
-                            <h1 class="display-6 text-white mb-0">Let’s Start A New Project</h1>
-                        </div>
-                    </div>
-                </div>
+                @Html.Action("PartialContactSideBar", "Contact")
                 <div class="col-lg-9">
                     <div class="contact-content h-100 pt-6 ps-6 pb-6">
                         <div class="bg-light p-4">
                             <div class="row g-5">
-                                <div class="col-xl-5 wow fadeInUp" data-wow-delay="0.1s">
-                                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a class="text-primary fw-bold" href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                                    <div class="d-flex mb-4">
-                                        <div class="btn-xl-square bg-primary text-white me-3">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Address</h4>
-                                            <p class="mb-0">123 Street New York.USA</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-4">
-                                        <div class="btn-xl-square bg-primary text-white me-3">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Mail Us</h4>
-                                            <p class="mb-0">info@example.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="btn-xl-square bg-primary text-white me-3">
-                                            <i class="fa fa-phone-alt"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Telephone</h4>
-                                            <p class="mb-0">(+012) 3456 7890</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @Html.Action("PartialContactAddress", "Contact")    
                                 <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
                                     <div>
                                         <form>
