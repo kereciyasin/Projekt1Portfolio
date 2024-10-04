@@ -67,5 +67,10 @@ namespace Projekt1Portfolio.Controllers
             var values = context.Tbl_Skill.ToList();
             return PartialView(values); 
         }
+        public PartialViewResult PartialSocialMedia()
+        {
+            var values = context.SocialMedia.Where(x => x.Status == true).ToList();
+            return PartialView(values);
+        }
     }
 }

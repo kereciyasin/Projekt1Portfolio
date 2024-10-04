@@ -37,5 +37,6 @@ namespace Projekt1Portfolio.Models
         public virtual DbSet<Tbl_Testimonial> Tbl_Testimonial { get; set; }
         public virtual DbSet<Tbl_Work> Tbl_Work { get; set; }
         public virtual DbSet<Tbl_Admin> Tbl_Admin { get; set; }
+        public virtual DbSet<SocialMedia> SocialMedia { get; set; }
     }
 }
