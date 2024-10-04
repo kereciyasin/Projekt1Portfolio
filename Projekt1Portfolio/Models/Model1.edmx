@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="MyPortfolio5DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="SocialMediaId" />
+          </Key>
+          <Property Name="SocialMediaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -141,6 +150,7 @@ warning 6002: The table/view 'MyPortfolio5Db.dbo.Tbl_Admin' does not have a prim
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="MyPortfolio5DbModelStoreContainer">
+          <EntitySet Name="SocialMedia" EntityType="Self.SocialMedia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_About" EntityType="Self.Tbl_About" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Category" EntityType="Self.Tbl_Category" Schema="dbo" store:Type="Tables" />
@@ -312,6 +322,7 @@ warning 6002: The table/view 'MyPortfolio5Db.dbo.Tbl_Admin' does not have a prim
             <End Role="Tbl_Message" EntitySet="Tbl_Message" />
           </AssociationSet>
           <EntitySet Name="Tbl_Admin" EntityType="MyPortfolio5DbModel.Tbl_Admin" />
+          <EntitySet Name="SocialMedia" EntityType="MyPortfolio5DbModel.SocialMedia" />
         </EntityContainer>
         <EntityType Name="Tbl_Admin">
           <Key>
@@ -320,6 +331,15 @@ warning 6002: The table/view 'MyPortfolio5Db.dbo.Tbl_Admin' does not have a prim
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="SocialMediaId" />
+          </Key>
+          <Property Name="SocialMediaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -457,6 +477,16 @@ warning 6002: The table/view 'MyPortfolio5Db.dbo.Tbl_Admin' does not have a prim
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SocialMedia">
+            <EntityTypeMapping TypeName="MyPortfolio5DbModel.SocialMedia">
+              <MappingFragment StoreEntitySet="SocialMedia">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SocialMediaId" ColumnName="SocialMediaId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
