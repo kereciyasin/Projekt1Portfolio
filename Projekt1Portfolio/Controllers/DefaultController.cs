@@ -51,6 +51,11 @@ namespace Projekt1Portfolio.Controllers
             ViewBag.phone = context.Tbl_Profile.Select(x => x.PhoneNumber).FirstOrDefault();
             ViewBag.image = context.Tbl_Profile.Select(x => x.ImageUrl).FirstOrDefault();
 
+            ViewBag.socialMediaUrl = context.SocialMedia.Select(x => x.SocialMediaUrl).FirstOrDefault();
+            ViewBag.socialMediaIcon = context.SocialMedia.Select(x => x.Icon).FirstOrDefault();
+            PartialSocialMedia();
+
+
             return PartialView();
         }
         public PartialViewResult PartialEducation()
@@ -72,5 +77,7 @@ namespace Projekt1Portfolio.Controllers
             var values = context.SocialMedia.Where(x => x.Status == true).ToList();
             return PartialView(values);
         }
+
+
     }
 }
