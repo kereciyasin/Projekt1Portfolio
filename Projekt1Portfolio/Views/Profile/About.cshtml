@@ -1,0 +1,30 @@
+﻿@model List<Projekt1Portfolio.Models.Tbl_Profile>
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Für mich</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Unvan</th>
+        <th>Aciklama</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Github</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Address</td>
+            <td>@item.Email</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Github</td>
+        </tr>
+    }   
+
+</table>
