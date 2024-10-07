@@ -14,6 +14,13 @@ namespace Projekt1Portfolio.Controllers
         // GET: Default
         public ActionResult Index()
         {
+            List<SelectListItem> values = (from x in context.Tbl_Category.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryId.ToString()
+                                           }).ToList();
+            ViewBag.v1 = values;
             return View();
         }
 
