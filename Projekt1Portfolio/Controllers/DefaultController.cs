@@ -18,13 +18,13 @@ namespace Projekt1Portfolio.Controllers
         }
 
         [HttpGet]
-        public PartialViewResult Index(Tbl_Message message)
+        public ActionResult Index(Tbl_Message message)
         {
             message.SendDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             message.IsRead = false;
             context.Tbl_Message.Add(message);
             context.SaveChanges();
-            return PartialView();
+            return RedirectToAction("Index");   
         }
 
         public PartialViewResult PartialHead()
