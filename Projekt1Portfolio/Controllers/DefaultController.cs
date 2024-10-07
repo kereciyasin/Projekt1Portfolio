@@ -10,8 +10,9 @@ namespace Projekt1Portfolio.Controllers
      
     public class DefaultController : Controller
     {
-        MyPortfolio5DbEntities context = new MyPortfolio5DbEntities();  
+        MyPortfolio5DbEntities context = new MyPortfolio5DbEntities();
         // GET: Default
+        [HttpGet]
         public ActionResult Index()
         {
             List<SelectListItem> values = (from x in context.Tbl_Category.ToList()
@@ -24,7 +25,7 @@ namespace Projekt1Portfolio.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public ActionResult Index(Tbl_Message message)
         {
             message.SendDate = DateTime.Parse(DateTime.Now.ToShortDateString());
