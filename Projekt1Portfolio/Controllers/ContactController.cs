@@ -9,7 +9,7 @@ namespace Projekt1Portfolio.Controllers
 {
     public class ContactController : Controller
     {
-        MyPortfolio5DbEntities db = new MyPortfolio5DbEntities();   
+        MyPortfolio5DbEntities db = new MyPortfolio5DbEntities();
         public ActionResult PartialContactSideBar()
         {
             return PartialView();
@@ -21,7 +21,16 @@ namespace Projekt1Portfolio.Controllers
             ViewBag.Phone = db.Tbl_Profile.Select(x => x.PhoneNumber).FirstOrDefault();
             ViewBag.Email = db.Tbl_Profile.Select(x => x.Email).FirstOrDefault();
 
-            return View();
+            return PartialView();
         }
+
+        public ActionResult PartialContactLocation()
+        {
+            ViewBag.Location = db.Tbl_Profile.Select(x => x.MapLocation).FirstOrDefault();
+            return PartialView();
+        }
+
+
+
     }
 }

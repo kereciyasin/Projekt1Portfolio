@@ -534,6 +534,13 @@
     <Content Include="Views\Contact\PartialContactAddress.cshtml" />
     <Content Include="Views\Default\PartialExperience.cshtml" />
     <Content Include="Views\Default\PartialService.cshtml" />
+    <Content Include="Views\Default\PartialPortfolio.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Default\PartialContact.cshtml" />
+    <Content Include="Views\Contact\PartialContactLocation.cshtml" />
+    <Content Include="Views\Category\NewProduct.cshtml" />
+    <Content Include="Views\Category\UpadteCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

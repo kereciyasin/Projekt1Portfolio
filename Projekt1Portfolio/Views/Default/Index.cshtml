@@ -1,4 +1,4 @@
-﻿
+﻿@model Projekt1Portfolio.Models.Tbl_Category
 @{
     Layout = null;
 }
@@ -31,208 +31,27 @@
     @Html.Action("PartialEducation", "Default")
     <!-- Education End -->
     <!-- Experience Start -->
-    @Html.Action("PartialExperience", "Default") 
+    @Html.Action("PartialExperience", "Default")
     <!-- Exparience End -->
     <!-- Skills Start -->
     @Html.Action("PartialSkill", "Default")
 
     <!-- Skills End -->
     <!-- Service Start -->
-    @Html.Action("PartialService", "Default")   
+    @Html.Action("PartialService", "Default")
     <!-- Service End -->
     <!-- Portfolio Start -->
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="portfolio-header h-100 bg-dark pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                            <p class="text-white sub-title">Portfolio</p>
-                            <h1 class="display-6 text-white mb-0">My Recent Works</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="portfolio-content h-100 pt-6 ps-6 pb-6">
-                        <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-xl-6">
-                                    <h4 class="text-body">Web Design</h4>
-                                    <h1 class="display-6 mb-0">Software Design for ABC Corporation</h1>
-                                </div>
-                                <div class="col-9 col-xl-4">
-                                    <div class="portfolio-img">
-                                        <div class="portfolio-img-inner">
-                                            <img src="img/Portfolio-1.jpg" class="img-fluid" alt="Image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 col-xl-2">
-                                    <div class="view-img">
-                                        <a href="img/Portfolio-1.jpg" class="btn btn-primary btn-lg-square" data-lightbox="Portfolio-1"><i class="fas fa-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-xl-6">
-                                    <h4 class="text-body">Web Development</h4>
-                                    <h1 class="display-6 mb-0">Website Development for ABC Corporation</h1>
-                                </div>
-                                <div class="col-9 col-xl-4">
-                                    <div class="portfolio-img">
-                                        <div class="portfolio-img-inner">
-                                            <img src="img/portfolio-2.jpg" class="img-fluid" alt="Image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 col-xl-2">
-                                    <div class="view-img">
-                                        <a href="img/portfolio-2.jpg" class="btn btn-primary btn-lg-square" data-lightbox="portfolio-2"><i class="fas fa-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item py-5 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-xl-6">
-                                    <h4 class="text-body">Photography</h4>
-                                    <h1 class="display-6 mb-0">Security Analysis for ABC Corporation</h1>
-                                </div>
-                                <div class="col-9 col-xl-4">
-                                    <div class="portfolio-img">
-                                        <div class="portfolio-img-inner">
-                                            <img src="img/portfolio-3.jpg" class="img-fluid" alt="Image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 col-xl-2">
-                                    <div class="view-img">
-                                        <a href="img/portfolio-3.jpg" class="btn btn-primary btn-lg-square" data-lightbox="portfolio-3"><i class="fas fa-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @Html.Action("PartialPortfolio", "Default")
+
     <!-- Portfolio End -->
     <!-- Blog Start -->
-    
     <!-- Blog End -->
     <!-- Testimonial Start -->
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="testimonial-header h-100 bg-dark pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                            <p class="text-white sub-title">Testimonial</p>
-                            <h1 class="display-6 text-white mb-0">What People Say</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="testimonial-content h-100 pt-6 ps-6 pb-6">
-                        <div class="testimonial-carousel owl-carousel bg-light wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-1.jpg' alt=''>">
-                                <div class="row gy-4 gx-2 mb-4">
-                                    <div class="col-sm-6">
-                                        <div class="d-flex justify-content-sm-end">
-                                            <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
-                                                <img src="img/testimonial-img-1.jpg" class="img-fluid" style="object-fit: cover;" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div>
-                                            <h5 class="mb-2">John Abraham</h5>
-                                            <p class="mb-0">New York, USA</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-sm-center">
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                                    </p>
-                                    <div class="d-flex justify-content-sm-center">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-2.jpg' alt=''>">
-                                <div class="row gy-4 gx-2 mb-4">
-                                    <div class="col-sm-6">
-                                        <div class="d-flex justify-content-sm-end">
-                                            <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
-                                                <img src="img/testimonial-img-2.jpg" class="img-fluid" style="object-fit: cover;" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div>
-                                            <h5 class="mb-2">John Abraham</h5>
-                                            <p class="mb-0">New York, USA</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-sm-center">
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                                    </p>
-                                    <div class="d-flex justify-content-sm-center">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-3.jpg' alt=''>">
-                                <div class="row gy-4 gx-2 mb-4">
-                                    <div class="col-sm-6">
-                                        <div class="d-flex justify-content-sm-end">
-                                            <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
-                                                <img src="img/testimonial-img-3.jpg" class="img-fluid" style="object-fit: cover;" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div>
-                                            <h5 class="mb-2">John Abraham</h5>
-                                            <p class="mb-0">New York, USA</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-sm-center">
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                                    </p>
-                                    <div class="d-flex justify-content-sm-center">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @Html.Action("PartialTestimonial", "Default")
+
     <!-- Testimonial End -->
     <!-- Contact Start -->
+
     <div class="container-fluid" id="pigraContact">
         <div class="container">
             <div class="row g-0">
@@ -241,7 +60,7 @@
                     <div class="contact-content h-100 pt-6 ps-6 pb-6">
                         <div class="bg-light p-4">
                             <div class="row g-5">
-                                @Html.Action("PartialContactAddress", "Contact")    
+                                @Html.Action("PartialContactAddress", "Contact")
                                 <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
                                     <div>
                                         <form>
@@ -272,10 +91,12 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="form-floating">
-                                                        <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
-                                                        <label for="subject">Subject</label>
+                                                        @*@Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })*@
+                                                        <label for="CategoryId">Konular</label> <!-- Label ve 'for' niteliği güncellendi -->
                                                     </div>
                                                 </div>
+
+
                                                 <div class="col-12">
                                                     <div class="form-floating">
                                                         <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
@@ -290,13 +111,8 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="col-12 wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="rounded">
-                                        <iframe class="rounded w-100"
-                                                style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd"
-                                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
-                                </div>
+                                @Html.Action("PartialContactLocation", "Contact")
+                                
                             </div>
                         </div>
                     </div>
@@ -304,9 +120,10 @@
             </div>
         </div>
     </div>
+
     <!-- Contact End -->
     <!-- Footer Start -->
-    @Html.Action("PartialSocialMedia", "Default")    
+    @Html.Action("PartialSocialMedia", "Default")
     <!-- Footer End -->
     <!-- Back to Top -->
     @Html.Action("PartialScript", "Default")

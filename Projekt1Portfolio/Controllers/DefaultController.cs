@@ -89,5 +89,16 @@ namespace Projekt1Portfolio.Controllers
             var values = context.Tbl_Services.ToList();
             return PartialView(values);
         }
+        public PartialViewResult PartialPortfolio()
+        {
+            var values = context.Tbl_Work.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialTestimonial()
+        {
+            var values = context.Tbl_Testimonial.ToList();
+            return PartialView(values);
+        }
+
     }
 }
