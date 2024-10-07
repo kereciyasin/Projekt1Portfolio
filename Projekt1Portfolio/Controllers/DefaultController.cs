@@ -16,7 +16,17 @@ namespace Projekt1Portfolio.Controllers
         {
             return View();
         }
-        
+
+        [HttpGet]
+        public PartialViewResult Index(Tbl_Message message)
+        {
+            message.SendDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            message.IsRead = false;
+            context.Tbl_Message.Add(message);
+            context.SaveChanges();
+            return PartialView();
+        }
+
         public PartialViewResult PartialHead()
         {
             return PartialView();
