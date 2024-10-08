@@ -57,11 +57,11 @@
 ![Diagram](./Screenshot/Screenshot8.png)
 
 ### Admin Panel
-![Admin Panel](./Screenshot/Admin1.png)
-![Admin Panel](./Screenshot/Admin2.png)
-![Admin Panel](./Screenshot/Admin3.png)
-![Admin Panel](./Screenshot/Admin4.png)
-![Admin Panel](./Screenshot/Admin5.png)
+![Admin Panel](./Screenshot/admin1.png)
+![Admin Panel](./Screenshot/admin2.png)
+![Admin Panel](./Screenshot/admin3.png)
+![Admin Panel](./Screenshot/admin4.png)
+![Admin Panel](./Screenshot/admin5.png)
 
 
 
