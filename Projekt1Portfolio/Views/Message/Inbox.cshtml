@@ -1,20 +1,50 @@
 ﻿@model List<Projekt1Portfolio.Models.Tbl_Message>
 
-
 @{
     ViewBag.Title = "Inbox";
     Layout = "~/Views/Admin/Index.cshtml";
+}
+
+@*/* Method to get background color based on category name*/*@
+@functions {
+    private string GetCategoryColor(string categoryName)
+    {
+        switch (categoryName)
+        {
+            case "Willkommen":
+                return "background-color: #e7f3fe;"; // Light Blue
+            case "Vielen Dank!":
+                return "background-color: #dff0d8;"; // Light Green
+            case "Wichtige Ankündigung":
+                return "background-color: #f2dede;"; // Light Red
+            case "Fragen und Antworten":
+                return "background-color: #fcf8e3;"; // Light Yellow
+            case "Neues Update Verfügbar":
+                return "background-color: #d9edf7;"; // Light Cyan
+            case "Feedback Erbeten":
+                return "background-color: #f5f5f5;"; // Light Gray
+            case "Aktion Erforderlich":
+                return "background-color: #f2a900;"; // Orange
+            case "Ereignisbestätigung":
+                return "background-color: #cce5ff;"; // Light Blue
+            case "Kundenzufriedenheit":
+                return "background-color: #d4edda;"; // Light Green
+            case "Sicherheitshinweis":
+                return "background-color: #fff3cd;"; // Light Yellow
+            default:
+                return "background-color: #ffffff;"; // Default white
+        }
+    }
 }
 
 <h2 class="mb-4">Eingehende Nachrichten</h2>
 
 <table class="table table-bordered">
     <tr>
-        <th>#</th>
         <th>Absender</th>
         <th>Betreff</th>
         <th>Datum</th>
-        <th>Kategorie</th>
+
         <th>Status</th>
         <th>Löschen</th>
         <th>Nachricht öffnen</th>
@@ -22,11 +52,13 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.KontaktId</td>
             <td>@item.Name</td>
-            <td>@item.Subject</td>
+
+            <td style="@GetCategoryColor(item.Tbl_Category.CategoryName)">
+                @item.Tbl_Category.CategoryName
+            </td>
             <td>@item.SendDate</td>
-            <td>@item.Tbl_Category.CategoryName</td>
+
             @if (item.IsRead == false)
             {
                 <td><a href="/Message/MessageStatusChanceToTrue/@item.KontaktId" class="btn btn-info">Als Gelesen Markieren</a></td>
@@ -34,9 +66,7 @@
             else
             {
                 <td><a href="/Message/MessageStatusChanceToFalse/@item.KontaktId" class="btn btn-warning">Als Ungelesen Markieren</a></td>
-
             }
-
 
             <td><a href="/Message/Loeschen/@item.KontaktId" class="btn btn-danger">Löschen</a></td>
             <td><a href="/Message/MessageDetails/@item.KontaktId" class="btn btn-dark">Nachricht öffnen</a></td>
