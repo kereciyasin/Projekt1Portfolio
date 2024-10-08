@@ -49,7 +49,7 @@ namespace Projekt1Portfolio.Controllers
         public ActionResult UpdateCategory(int id)
         {
             var category = db.Tbl_Category.Find(id);
-            return View("EditCategory", category);
+            return View(category);
         }
 
         [HttpPost]
@@ -57,6 +57,7 @@ namespace Projekt1Portfolio.Controllers
         {
             var category = db.Tbl_Category.Find(p.CategoryId);
             category.CategoryName = p.CategoryName;
+            category.CategoryStatus = p.CategoryStatus; 
             db.SaveChanges();
             return RedirectToAction("CategoryList");
         }

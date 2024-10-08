@@ -1,7 +1,6 @@
-﻿﻿@model List<Projekt1Portfolio.Models.Tbl_Category>
+﻿@model List<Projekt1Portfolio.Models.Tbl_Category>
 @{
     Layout = "~/Views/Admin/Index.cshtml";
-
 }
 
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -11,27 +10,21 @@
     <br />
     <table class="table table-bordered">
         <tr>
-            <th>Kategorie-ID</th>
             <th>Kategoriename</th>
             <th>Kategoriezustand</th>
             <th>Löschen</th>
-            <th>Update</th>
-
+            <th>Aktualisieren</th>
         </tr>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.CategoryId</td>
                 <td>@item.CategoryName</td>
                 <td>@item.CategoryStatus</td>
-
                 <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Löschen</a></td>
-                <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-warning">Update</a></td>
-
+                <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-warning">Aktualisieren</a></td>
             </tr>
         }
     </table>
 
-    <a href="/Category/CreateCategory/" class="btn btn-info">Kategori Ekle</a>
-
+    <a href="/Category/CreateCategory/" class="btn btn-info">Kategorie hinzufügen</a>
 </div>

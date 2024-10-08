@@ -1,24 +1,18 @@
-﻿@model Projekt1Portfolio.Models.Tbl_Category    
+﻿@model Projekt1Portfolio.Models.Tbl_Category
+
 @{
-    Layout = null;
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/Admin/Index.cshtml";
 }
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
-<div class="container">
-    <br />
-    <br />
-    <h3 class="alert alert-info">Neue Kategorie hinzufügen</h3>
+<h2 class="mb-4">Neue Kategorieneingabe</h2>
 
-    <label><strong>Kategoriename</strong></label>
-    @Html.TextBoxFor(m => m.CategoryName, new { @class = "form-control" })
+<form method="post">
+    <label>Kategoriename</label>
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
     <br />
-    <label><strong>Kategoriebeschreibung</strong></label>
-    <input type="text" class="form-control" />
-    <br />
-    <label><strong>Kategoriewert</strong></label>
+    <label>Kategoriezustand</label>
     @Html.TextBoxFor(x => x.CategoryStatus, new { @class = "form-control" })
     <br />
-    <button class="btn btn-primary">Kategorie erstellen</button>
-
-</div>
-
+    <button class="btn btn-info">Hinzufügen</button>
+</form>
