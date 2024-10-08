@@ -14,17 +14,24 @@ namespace Projekt1Portfolio.Controllers
         public ActionResult CategoryList()
         {
             var values = db.Tbl_Category.ToList();
-            return View();
+            return View(values);
         }
 
-        public ActionResult CategoryDelete(int id)
+        public ActionResult DeleteCategory(int id)
         {
-            var values = db.Tbl_Category.Find(id);
-            db.Tbl_Category.Remove(values);
+            var category = db.Tbl_Category.Find(id);
+            var messages = db.Tbl_Message.Where(x => x.CategoryId == id).ToList();
+            foreach (var message in messages)
+            {
+                db.Tbl_Message.Remove(message);
+                db.SaveChanges();
+            }
+            db.Tbl_Category.Remove(category);
             db.SaveChanges();
             return RedirectToAction("CategoryList");
-
         }
+
+
         [HttpGet]
         public ActionResult CreateCategory()
         {
