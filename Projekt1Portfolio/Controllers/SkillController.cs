@@ -3,17 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using PagedList;
+using PagedList.Mvc;
+using Newtonsoft.Json;
 using System.Web.Mvc;
 
 namespace Projekt1Portfolio.Controllers
 {
     public class SkillController : Controller
     {
-        MyPortfolio5DbEntities context = new MyPortfolio5DbEntities();  
-        public ActionResult SkillList()
+        MyPortfolio5DbEntities context = new MyPortfolio5DbEntities();
+        public ActionResult SkillList(int page = 1)
         {
-            var values = context.Tbl_Skill.ToList(); 
-			return View(values);
+            var values = context.Tbl_Skill.ToList().ToPagedList(page, 5);
+            return View(values);
         }
 
         [HttpGet]

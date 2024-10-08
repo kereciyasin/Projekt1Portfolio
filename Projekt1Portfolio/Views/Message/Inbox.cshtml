@@ -1,4 +1,7 @@
-﻿@model List<Projekt1Portfolio.Models.Tbl_Message>
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Projekt1Portfolio.Models.Tbl_Message>
+@*@model List<Projekt1Portfolio.Models.Tbl_Message>*@
 
 @{
     ViewBag.Title = "Inbox";
@@ -73,3 +76,9 @@
         </tr>
     }
 </table>
+
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Inbox", new { page }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    { "page-link"}
+})

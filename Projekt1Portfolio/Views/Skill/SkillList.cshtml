@@ -1,5 +1,7 @@
-﻿@model List<Projekt1Portfolio.Models.Tbl_Skill>
-
+﻿@*@model List<Projekt1Portfolio.Models.Tbl_Skill>*@
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Projekt1Portfolio.Models.Tbl_Skill>
 
 @{
     ViewBag.Title = "SkillListe";
@@ -30,4 +32,10 @@
     }
 </table>
 
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("SkillListe", new { page }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    { "page-link"}
+})
 <a href="/Skill/CreateSkill/" class="btn btn-info">Neue Fähigkeit hinzufügen</a>
+
