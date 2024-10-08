@@ -42,6 +42,10 @@
 
 ## 🖼️ Screenshots
 
+### SQL
+
+![Diagram](./Screenshot/Screenshot.png)
+
 ### 1. Admin Panel
 ![Admin Panel](./images/admin_panel.png)
 
