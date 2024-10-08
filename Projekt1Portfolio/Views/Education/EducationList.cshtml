@@ -1,8 +1,36 @@
-﻿
+﻿@model List<Projekt1Portfolio.Models.Tbl_Education>
 @{
     ViewBag.Title = "EducationList";
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2>EducationList</h2>
+<h2 class="mb-4">Bildungs-Kategorien Seite</h2>
 
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Bildungs-ID</th>
+            <th>Bildungsname</th>
+            <th>Datum</th>
+            <th>Untertitel</th>
+            <th>Beschreibung</th>
+            <th>Löschen</th>
+            <th>Aktualisieren</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EducationId</td>
+                <td>@item.Title</td>
+                <td>@item.EducationDate</td>
+                <td>@item.SubTitle</td>
+                <td>@item.Desciption</td>
+
+                <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-danger">Löschen</a></td>
+                <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-warning">Aktualisieren</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Education/AddEducation/" class="btn btn-info">Bildung hinzufügen</a>
+</div>

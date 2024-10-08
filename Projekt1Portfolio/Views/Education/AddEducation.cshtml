@@ -1,0 +1,25 @@
+﻿@model Projekt1Portfolio.Models.Tbl_Education
+
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Neue Bildungseingabe</h2>
+
+<form method="post">
+    <label>Bildungsname</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Datum</label>
+    @Html.TextBoxFor(x => x.EducationDate, new { @class = "form-control" })
+    <br />
+    <label>Untertitel</label>
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    <label>Beschreibung</label>
+    @Html.TextAreaFor(x => x.Desciption, 4, 0, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Hinzufügen</button>
+</form>
