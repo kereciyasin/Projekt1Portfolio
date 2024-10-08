@@ -42,12 +42,27 @@
 
 ## 🖼️ Screenshots
 
-### 1. Admin Panel
-![Admin Panel](./images/admin_panel.png)
+### SQL
 
-### 2. Statistiken mit Diagrammen
-![Statistiken](./images/statistics.png)
+![Diagram](./Screenshot/Screenshot.png)
 
-### 3. Kontaktformular
-![Kontaktformular](./images/contact_form.png)
+### Web Site
+
+![Diagram](./Screenshot/Screenshot1.png)
+![Diagram](./Screenshot/Screenshot3.png)
+![Diagram](./Screenshot/Screenshot4.png)
+![Diagram](./Screenshot/Screenshot5.png)
+![Diagram](./Screenshot/Screenshot6.png)
+![Diagram](./Screenshot/Screenshot7.png.png)
+![Diagram](./Screenshot/Screenshot8.png)
+
+### Admin Panel
+![Admin Panel](./Screenshot/admin1.png)
+![Admin Panel](./Screenshot/admin2.png)
+![Admin Panel](./Screenshot/admin3.png)
+![Admin Panel](./Screenshot/admin4.png)
+![Admin Panel](./Screenshot/admin5.png)
+
+
+
 
