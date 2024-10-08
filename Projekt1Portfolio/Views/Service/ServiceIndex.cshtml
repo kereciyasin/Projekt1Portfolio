@@ -1,0 +1,28 @@
+﻿@model List<Projekt1Portfolio.Models.Tbl_Services>
+
+@{
+    ViewBag.Title = "ServiceIndex";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Service Index</h2>
+
+<form method="post">
+    @foreach (var service in Model)
+    {
+        @Html.HiddenFor(x => service.ServicesId, new { @class = "form-control" })
+        <label>Überschrift</label>
+        @Html.TextBoxFor(x => service.Title, new { @class = "form-control" })
+        <br />
+        <label>Beschreibung</label>
+        @Html.TextAreaFor(x => service.Description, 6, 0, new { @class = "form-control" })
+        <br />
+        <label>Icon</label>
+        @Html.TextAreaFor(x => service.Icon, 2, 0, new { @class = "form-control" })
+        <br />
+        <td><a href="/Service/ServiceDelete/@service.ServicesId" class="btn btn-danger">Löschen</a></td>
+        <td><a href="/Service/ServiceEdit/@service.ServicesId" class="btn btn-warning">Aktualisieren</a></td>
+
+    }
+    <a href="/Service/ServiceAdd/" class="btn btn-info">Hinzufügen</a>
+</form>

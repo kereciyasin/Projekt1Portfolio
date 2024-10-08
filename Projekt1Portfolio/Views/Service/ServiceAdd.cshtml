@@ -1,0 +1,24 @@
+﻿@model Projekt1Portfolio.Models.Tbl_Services
+@{
+    ViewBag.Title = "ServiceAdd";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+<h2 class="mb-4">Dienst Hinzufügem</h2>
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.ServicesId, new { @class = "form-control" })
+    <label>Überschrift</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Beschreibung</label>
+    @Html.TextAreaFor(x => x.Description, 6, 0, new { @class = "form-control" })
+    <br />
+    <label>Icon</label>
+    @Html.TextAreaFor(x => x.Icon, 2, 0, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Hinzufügen</button>
+</form>
