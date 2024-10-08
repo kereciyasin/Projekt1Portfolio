@@ -1,0 +1,38 @@
+﻿@model List<Projekt1Portfolio.Models.Tbl_Testimonial>
+@{
+    ViewBag.Title = "Referenzenliste";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Referenzen Seite</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Überschrift</th>
+                <th>Kommentar</th>
+                <th>Foto</th>
+                <th>Land</th> <!-- Ülke için başlık -->
+                <th>Löschen</th>
+                <th>Aktualisieren</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Title</td>
+                    <td>@item.Comment</td>
+                    <td><img src="@item.ImageUrl" alt="Referenz Foto" style="width: 100px; height: auto;" /></td>
+                    <td>@item.Contry</td> <!-- Ülke bilgisi -->
+                    <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-danger">Löschen</a></td>
+                    <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-warning">Aktualisieren</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Testimonial/CreateTestimonial" class="btn btn-info">Referenz Hinzufügen</a>
+</div>

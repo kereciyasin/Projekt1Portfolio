@@ -1,0 +1,29 @@
+﻿@model Projekt1Portfolio.Models.Tbl_Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Referenz Aktualisieren</h2>
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.TestimonialId, new { @class = "form-control" })
+    <label>Name</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Überschrift</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Kommentar</label>
+    @Html.TextAreaFor(x => x.Comment, 6, 0, new { @class = "form-control", rows = 3 })
+    <br />
+    <label>Foto</label>
+    @Html.TextAreaFor(x => x.ImageUrl, 5, 0, new { @class = "form-control", rows = 3 })
+    <br />
+    <label>Land</label>
+    @Html.TextBoxFor(x => x.Contry, new { @class = "form-control" }) <!-- Düzeltme: 'Contry' yerine 'Country' -->
+    <br />
+    <button class="btn btn-success">
+        Aktualisieren
+    </button>
