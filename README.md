@@ -39,3 +39,15 @@
 📟 Die Paging-Struktur wurde verwendet, um die Anzeige der Fähigkeiten-Seite zu vereinfachen.
 
 🌕 Diagramme wurden mit dem ChartJs-Plugin erstellt.
+
+## 🖼️ Screenshots
+
+### 1. Admin Panel
+![Admin Panel](./images/admin_panel.png)
+
+### 2. Statistiken mit Diagrammen
+![Statistiken](./images/statistics.png)
+
+### 3. Kontaktformular
+![Kontaktformular](./images/contact_form.png)
+
