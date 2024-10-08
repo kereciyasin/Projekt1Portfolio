@@ -56,12 +56,13 @@
 ![Diagram](./Screenshot/Screenshot7.png.png)
 ![Diagram](./Screenshot/Screenshot8.png)
 
-### 1. Admin Panel
-![Admin Panel](./images/admin_panel.png)
+### Admin Panel
+![Admin Panel](./Screenshot/Admin1.png)
+![Admin Panel](./Screenshot/Admin2.png)
+![Admin Panel](./Screenshot/Admin3.png)
+![Admin Panel](./Screenshot/Admin4.png)
+![Admin Panel](./Screenshot/Admin5.png)
 
-### 2. Statistiken mit Diagrammen
-![Statistiken](./images/statistics.png)
 
-### 3. Kontaktformular
-![Kontaktformular](./images/contact_form.png)
+
 
