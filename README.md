@@ -49,12 +49,11 @@
 ### Web Site
 
 ![Diagram](./Screenshot/Screenshot1.png)
-![Diagram](./Screenshot/Screenshot2.png)
 ![Diagram](./Screenshot/Screenshot3.png)
 ![Diagram](./Screenshot/Screenshot4.png)
 ![Diagram](./Screenshot/Screenshot5.png)
 ![Diagram](./Screenshot/Screenshot6.png)
-![Diagram](./Screenshot/Screenshot7.png)
+![Diagram](./Screenshot/Screenshot7.png.png)
 ![Diagram](./Screenshot/Screenshot8.png)
 
 ### 1. Admin Panel
