@@ -556,6 +556,10 @@
     <Content Include="Views\Service\ServiceIndex.cshtml" />
     <Content Include="Views\Service\ServiceAdd.cshtml" />
     <Content Include="Views\Service\ServiceEdit.cshtml" />
+    <Content Include="Views\Grafik\PartialChartSkill.cshtml" />
+    <Content Include="Views\Grafik\Index.cshtml" />
+    <Content Include="Views\Skill\GetSkillData.cshtml" />
+    <Content Include="Views\Skill\SkillGraph.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

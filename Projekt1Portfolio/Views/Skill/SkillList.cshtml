@@ -4,7 +4,7 @@
 @model PagedList.IPagedList<Projekt1Portfolio.Models.Tbl_Skill>
 
 @{
-    ViewBag.Title = "SkillListe";
+    ViewBag.Title = "SkillList";
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
@@ -13,7 +13,7 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>Id</th>
+        @*<th>Id</th>*@
         <th>Titel</th>
         <th>Wert</th>
         <th>Löschen</th>
@@ -23,7 +23,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.SkillId</td>
+            @*<td>@item.SkillId</td>*@
             <td>@item.Title</td>
             <td>@item.Value</td>
             <td> <a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-danger">Löschen</a></td>
@@ -32,7 +32,7 @@
     }
 </table>
 
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("SkillListe", new { page }), new PagedListRenderOptions
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("SkillList", new { page }), new PagedListRenderOptions
 {
     LiElementClasses = new List<string>
     { "page-link"}

@@ -26,12 +26,12 @@ namespace Projekt1Portfolio.Controllers
         }
 
         [HttpPost]
-		public ActionResult CreateSkill(Tbl_Skill skill)
-		{
+        public ActionResult CreateSkill(Tbl_Skill skill)
+        {
             context.Tbl_Skill.Add(skill);
-			context.SaveChanges();  
-			return RedirectToAction("SkillList");  
-		}
+            context.SaveChanges();
+            return RedirectToAction("SkillList");
+        }
 
         public ActionResult DeleteSkill(int id)
         {
@@ -40,5 +40,16 @@ namespace Projekt1Portfolio.Controllers
             context.SaveChanges();
             return RedirectToAction("SkillList");
         }
-	}
+
+        public ActionResult GetSkillData()
+        {
+            var skillData = context.Tbl_Skill.Select(s => new { s.Title, s.Value }).ToList();
+            return Json(skillData, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult SkillGraph()
+        {
+            return View();
+        }
+    }
 }

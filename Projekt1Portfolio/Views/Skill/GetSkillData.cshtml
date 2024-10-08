@@ -1,0 +1,57 @@
+﻿@model Projekt1Portfolio.Models.Tbl_Skill
+@{
+    ViewBag.Title = "GetSkillData";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2>Skills Graph</h2>
+
+<!-- Grafik için Canvas elementi -->
+<canvas id="skillsChart" width="400" height="200"></canvas>
+
+<!-- Chart.js kütüphanesini dahil ediyoruz -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Sayfa yüklendiğinde JSON verisini sunucudan alıp grafiği oluşturacağız
+    document.addEventListener("DOMContentLoaded", function () {
+        // Bu URL, SkillController'daki GetSkillData aksiyonundan JSON verisini alır
+        fetch('@Url.Action("GetSkillData", "Skill")')
+            .then(response => response.json())
+            .then(skillData => {
+                // JSON verisinden label ve data array'lerini oluşturuyoruz
+                var labels = skillData.map(function (item) {
+                    return item.Title;  // Beceri isimleri
+                });
+
+                var values = skillData.map(function (item) {
+                    return item.Value;  // Beceri seviyeleri
+                });
+
+                // Chart.js ile grafiği oluşturma
+                var ctx = document.getElementById('skillsChart').getContext('2d');
+                var skillsChart = new Chart(ctx, {
+                    type: 'bar', // Çubuk grafiği
+                    data: {
+                        labels: labels, // Becerilerin isimleri
+                        datasets: [{
+                            label: 'Skill Levels',
+                            data: values, // Becerilerin değerleri
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => console.log('Error fetching data:', error));
+    });
+</script>
